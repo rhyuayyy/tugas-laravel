@@ -113,12 +113,21 @@
             transform: translateY(-5px);
         }
     </style>
+     
 </head>
 <body>
     <div class="welcome-container">
         <h1>Selamat Datang!</h1>
         <p>Gagal itu gapapa yang ga boleh itu nyerah</p>
         <a href="home.php">Mulai Sekarang</a>
+        <h1>Pesan dari Form</h1>
+
+    <!-- Cek jika pesan ada -->
+    @if(isset($message))
+        <p>Pesan: {{ $message }}</p>
+    @else
+        <p>Tidak ada pesan yang dikirim.</p>
+    @endif
     </div>
 </body>
 </html>
